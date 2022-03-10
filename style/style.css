@@ -16,7 +16,6 @@
     grid-template-areas: "header header header header"
         "mainmenu mainmenu mainmenu aside"
         "footer footer footer footer";
-
 }
 
 .header {
@@ -94,4 +93,38 @@
     align-items: center;
     padding: 5px;
     margin: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        display: none;
+    }
+    .container {
+        display: grid;
+        height: 40vh;
+        width: 60%;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: "header header header header"
+            "mainmenu mainmenu mainmenu aside"
+            "footer footer footer footer";
+    }
+}
+
+@media screen and (max-width: 599px) and (min-width: 300px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .header {
+        height: 30vh;
+    } 
+    .mainmenu {
+        height: 30vh;
+    } 
+    .aside {
+        height: 30vh;
+    } 
+    .footer {
+        display: none;
+    }
 }
